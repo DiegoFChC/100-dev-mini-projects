@@ -1,0 +1,56 @@
+---
+interface Props {
+  text: string
+}
+
+const { text } = Astro.props
+---
+
+<div>
+  <span></span>
+  <p>{text.toUpperCase()}</p>
+</div>
+
+<style>
+  div {
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
+    background: rgba(var(--color-bg), .1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: rgb(var(--color-primary));
+    border-radius: 50%;
+    animation: blink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  p {
+    margin: 0;
+    font-size: .55rem;
+    color: white;
+    letter-spacing: .103rem;
+  }
+
+  @keyframes blink {
+    0% {
+      background: rgb(var(--color-primary));
+    }
+    50% {
+      background: rgb(var(--color-primary), .7);
+    }
+  }
+</style>
