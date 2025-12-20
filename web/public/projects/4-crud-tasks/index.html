@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>CRUS Tasks</title>
+</head>
+<body>
+  <main>
+    <section class="form">
+      <div class='form-container'>
+        <p>✕</p>
+        <h2>Nueva tarea</h2>
+        <div class='custom-input'>
+          <input id='title' type="text" required onfocus=''>
+          <label for='title'>Tarea</label>
+          <div class='underline'></div>
+          <span>Este campo es requerido</span>
+        </div>
+        <!-- <div class='custom-textarea'>
+          <textarea id='Description' required></textarea>
+          <label for="description">Descripción</label>
+          <div class='underline'></div>
+        </div> -->
+        <div class='selects'>
+          <div class='custom-select'>
+            <label for="priority">Prioridad</label>
+            <select name="Prioridad" id="priority" required>
+              <option value="High" selected>Alta</option>
+              <option value="Medium">Media</option>
+              <option value="Low">Baja</option>
+            </select>
+            <div class='icon-container'>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+          </div>
+          <div class='custom-select'>
+            <label for="state">Estado</label>
+            <select name="Estado" id="state" required>
+              <option value="To Do" selected>Por hacer</option>
+              <option value="In Progress">En progreso</option>
+              <option value="Done">Hecha</option>
+            </select>
+            <div class='icon-container'>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class='btn-submit'>
+          <button type='submit'>Crear tarea</button>
+        </div>
+      </div>
+    </section>
+    <section class="list">
+      <div class='header'>
+        <h1>Lista de tareas</h1>
+        <button>
+          <ion-icon name="add-outline"></ion-icon>
+          <span>Agregar tarea</span>
+        </button>
+      </div>
+      <div class='content'>
+        <ul class='tasks-content'>
+          <!-- <li class='task'>
+            <div class='title info'>
+              <span>Task</span>
+              <p>Go to gym</p>
+            </div>
+            <div class='priority info high'>
+              <span>Priority</span>
+              <p>High</p>
+            </div>
+            <div class='state'>
+              <span>to Do</span>
+            </div>
+            <span class='progress'></span>
+            <div class='icons'>
+              <ion-icon name="create-outline"></ion-icon>
+              <ion-icon name="trash-outline"></ion-icon>
+            </div>
+          </li>
+          <li class='task'>
+            <div class='title info'>
+              <span>Task</span>
+              <p>Change slider to scroll</p>
+            </div>
+            <div class='priority info medium'>
+              <span>Priority</span>
+              <p>Medium</p>
+            </div>
+            <div class='state'>
+              <span>in Progress</span>
+            </div>
+            <div class='progress'></div>
+            <div class='icons'>
+              <ion-icon name="create-outline"></ion-icon>
+              <ion-icon name="trash-outline"></ion-icon>
+            </div>
+          </li>
+          <li class='task'>
+            <div class='title info'>
+              <span>Task</span>
+              <p>Change slider to scroll</p>
+            </div>
+            <div class='priority info low'>
+              <span>Priority</span>
+              <p>Low</p>
+            </div>
+            <div class='state'>
+              <span>Done</span>
+            </div>
+            <div class='progress'></div>
+            <div class='icons'>
+              <ion-icon name="create-outline"></ion-icon>
+              <ion-icon name="trash-outline"></ion-icon>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src='script.js'></script>
+</body>
+</html>

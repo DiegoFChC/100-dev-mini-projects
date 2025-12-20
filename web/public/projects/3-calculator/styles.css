@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(81, 52, 150);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 300px;
+  height: auto;
+  padding: 15px;
+  background-color: rgb(0, 0, 34);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+}
+
+.container .display {
+  width: 100%;
+  height: 100px;
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.103);
+  border-radius: 10px;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  overflow: hidden;
+}
+
+.container .buttons {
+  width: 100%;
+  height: 320px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.container .buttons .btn-equal {
+  grid-column: 3 / 5;
+  grid-row: 5;
+}
+
+button {
+  border-radius: 15px;
+  border: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.014);
+  transition: background .3s ease;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+button.btn-special {
+  color: rgb(79, 28, 173);
+}
+
+button.btn-clear {
+  color: rgb(99, 0, 0);
+}
+
+button.btn-equal {
+  font-weight: 800;
+  background: rgb(100, 0, 0);
+}
+
+button.btn-clear, button.btn-special {
+  font-weight: 800;
+  background-color: rgba(255, 255, 255, 0.034);
+}
+
+button:not(.btn-equal):hover {
+  background: rgba(255, 255, 255, 0.075);
+  cursor: pointer;
+}
+
+button.btn-equal:hover {
+  background: rgb(51, 0, 0);
+  cursor: pointer;
+}
