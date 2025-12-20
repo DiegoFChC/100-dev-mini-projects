@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0;
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Form */
+
+.form {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.096);
+  backdrop-filter: blur(3px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.form.active {
+  display: flex;
+}
+
+.form .form-container {
+  width: 60%;
+  height: auto;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.39);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.form .form-container p:first-child {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.form .form-container h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.custom-input {
+  position: relative;
+}
+
+.custom-input input {
+  width: 100%;
+  height: 30px;
+  padding: 0px 10px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid silver;
+}
+
+.custom-input label {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  color: rgb(83, 83, 83);
+  transition: all .3s ease;
+}
+
+.custom-input input:focus ~ label,
+.custom-input input:valid ~ label {
+  transform: translateY(-22px);
+  font-size: .9rem;
+  color: rgb(158, 120, 248);
+}
+
+.custom-input .underline {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.custom-input .underline::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(104, 42, 250);
+  transform: scale(0);
+  transition: transform .3s ease;
+}
+
+.custom-input input:focus ~ .underline::before,
+.custom-input input:valid ~ .underline::before {
+  transform: scale(1)
+}
+
+.custom-input span {
+  display: none;
+}
+
+.custom-input.error > span {
+  display: block;
+  color: red;
+  font-size: .8rem;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+}
+
+.custom-textarea {
+  position: relative;
+}
+
+.custom-textarea > textarea {
+  width: 100%;
+  min-height: 25px;
+  padding: 0 10px;
+  margin-top: 20px;
+  font-size: 1rem;
+  field-sizing: content;
+  resize: none;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid silver;
+  position: relative;
+  z-index: 100;
+}
+
+.custom-textarea label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: rgb(83, 83, 83);
+  transition: all .3s ease;
+  user-select: none;
+}
+
+.custom-textarea > textarea:focus ~ label,
+.custom-textarea > textarea:valid ~ label {
+  bottom: calc(100% - 15px);
+  font-size: .9rem;
+  color: rgb(158, 120, 248);
+}
+
+.custom-textarea .underline {
+  position: relative;
+  bottom: 5px;
+  width: 100%;
+  height: 1px;
+  z-index: 101;
+}
+
+.custom-textarea .underline::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(104, 42, 250);
+  bottom: 0;
+  transform: scale(0);
+  transition: transform .3s ease;
+}
+
+.custom-textarea textarea:focus ~ .underline::before,
+.custom-textarea textarea:valid ~ .underline::before {
+  transform: scale(1);
+}
+
+.selects {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.selects .custom-select {
+  position: relative;
+}
+
+.selects .custom-select:first-child,
+.selects .custom-select:nth-child(2) {
+  flex: 1;
+}
+
+.custom-select select {
+  outline: none;
+  appearance: none;
+  width: 100%;
+  min-width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(104, 42, 250);
+  color: rgb(82, 82, 82);
+}
+
+.custom-select label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  padding: 0 5px;
+  font-size: .9rem;
+  color: rgb(158, 120, 248);
+  background-color: white;
+}
+
+.custom-select .icon-container {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-40%);
+  pointer-events: none;
+}
+
+.form-container .btn-submit {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-submit button {
+  width: 150px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: rgb(104, 42, 250);
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+
+.btn-submit button:hover {
+  background: blueviolet;
+}
+
+/* task list */
+
+.list {
+  width: 70%;
+}
+
+.list .header {
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list .header h1 {
+  font-size: 2rem;
+}
+
+.list .header button {
+  width: 170px;
+  height: 45px;
+  padding: 10px;
+  background-color: rgb(104, 42, 250);
+  box-shadow: 0 0 15px rgba(104, 42, 250, 0.582);
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: box-shadow .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.list .header button span {
+  z-index: 2;
+}
+
+.list .header button::before {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: rgba(129, 52, 252, 0.979);
+  border-radius: 50px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  transition: width .3s ease,
+              height .3s ease,
+              opacity .4s ease;
+}
+
+.list .header button:hover {
+  box-shadow: 0 0 20px rgba(104, 42, 250, 0.671);
+}
+
+.list .header button:hover::before {
+  width: 100%;
+  height: 170px;
+  opacity: 1;
+  transition: width .4s ease-out,
+              height .4s ease-out,
+              opacity .2s ease;
+}
+
+.list .header button ion-icon {
+  font-size: 1.5rem;
+  --ionicon-stroke-width: 3rem;
+}
+
+.content {
+  width: 100%;
+}
+
+.content .tasks-content {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tasks-content .task {
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.205);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task .info span {
+  display: block;
+  font-size: 1rem;
+  color: rgb(165, 165, 165);
+  padding-bottom: 5px;
+}
+
+.task .info p {
+  font-size: 1.05rem;
+  color: rgb(46, 46, 46);
+}
+
+.task .title {
+  width: 200px;
+}
+
+.task .priority p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.task .priority.high p {
+  color: rgb(216, 0, 0);
+}
+
+.task .priority.medium p {
+  color: rgb(250, 192, 0);
+}
+
+.task .priority.low p {
+  color: rgb(0, 185, 0);
+}
+
+.task .state {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task .state span {
+  background-color: rgb(231, 231, 231);
+  padding: 10px 15px;
+  color: gray;
+  font-size: .8rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.task .progress-bar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: conic-gradient(rgb(96, 0, 252) var(--progress), rgb(226, 226, 226) 0deg);
+  position: relative;
+}
+
+.task .progress-bar::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icons {
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons ion-icon {
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: transform .3s ease;
+  position: relative;
+}
+
+.icons ion-icon:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.034);
+  border-radius: 5px;
+}
+
+.icons ion-icon:first-child {
+  color: gray;
+}
+
+.icons ion-icon:nth-child(2) {
+  color: rgb(204, 79, 79);
+}
+
+  .icons ion-icon:last-child {
+  color: rgb(0, 122, 0);
+}
+
+@media (width >= 1200px) {
+  .form .form-container {
+    width: 30%;
+  }
+
+  .list {
+    width: 40%;
+  }
+}
+
+@media (width >= 1000px) {
+  .form .form-container {
+    width: 40%;
+  }
+
+  .list {
+    width: 60%;
+  }
+}
+
+@media (width <= 800px) {
+  .form .form-container {
+    width: 60%;
+  }
+
+  .list {
+    width: 90%;
+  }
+}
+
+@media (width <= 500px) {
+  .form .form-container {
+    width: 90%;
+  }
+}
