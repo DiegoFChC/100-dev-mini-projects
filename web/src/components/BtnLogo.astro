@@ -1,0 +1,49 @@
+---
+interface Props {
+  color?: boolean
+  link: string
+  blank?: boolean
+}
+
+const { color, link, blank } = Astro.props
+---
+
+<a
+  class={color ? 'primary' : ''}
+  href={link}
+  target={blank ? '_blank' : undefined}
+>
+  <slot />
+</a>
+
+<style>
+  a {
+    text-decoration: none;
+    padding: 7px 12px;
+    margin-top: 10px;
+    background: transparent;
+    display: flex;
+    gap: 7px;
+    justify-content: stretch;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    border-radius: 9px;
+    color: rgb(255, 255, 255);
+    font-size: .9rem;
+    cursor: pointer;
+    transition: background .3s ease;
+  }
+
+  a:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .primary {
+    border-color: rgba(var(--color-primary), 0.5);
+    color: rgb(var(--color-primary));
+  }
+
+  .primary:hover {
+    background: rgba(var(--color-primary), 0.05);
+  }
+</style>
