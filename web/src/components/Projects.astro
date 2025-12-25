@@ -1,5 +1,8 @@
 ---
 import { PROJECTS } from '../projects'
+import BtnLogo from './BtnLogo.astro'
+import Github from './icons/Github.astro'
+import Demo from './icons/Demo.astro'
 ---
 
 <section>
@@ -23,6 +26,17 @@ import { PROJECTS } from '../projects'
                 {project.learnings.map((learning) => (
                   <li>{learning}</li>
                 ))}
+              </ul>
+              <ul>
+                <BtnLogo color link={project.slug}>
+                  <Demo /> Demo
+                </BtnLogo>
+                <BtnLogo
+                  link={`https://github.com/DiegoFChC/100-dev-mini-projects/tree/main/${project.slug}`}
+                  blank
+                >
+                  <Github /> Código
+                </BtnLogo>
               </ul>
             </div>
           </article>
@@ -50,9 +64,9 @@ import { PROJECTS } from '../projects'
   article {
     color: white;
   }
-  
+
   .info {
-    padding: 10px 10px 5px 10px;
+    padding: 10px 12px 5px 12px;
     position: relative;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
@@ -70,7 +84,7 @@ import { PROJECTS } from '../projects'
     position: absolute;
     top: 100%;
     left: 0;
-    transition: top .4s ease;
+    transition: top 0.4s ease;
     z-index: -1;
   }
 
@@ -92,7 +106,7 @@ import { PROJECTS } from '../projects'
   article .image {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9; 
+    aspect-ratio: 16 / 9;
     text-decoration: none;
   }
 
@@ -111,6 +125,35 @@ import { PROJECTS } from '../projects'
 
   h2 {
     margin: 0;
+    font-size: 1.3rem;
+    cursor: default;
+  }
+
+  p {
+    color: rgb(204, 204, 204);
+    font-size: 0.85rem;
+    font-weight: lighter;
+    cursor: default;
+  }
+
+  .info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    cursor: default;
+  }
+
+  ul:last-child {
+    margin-bottom: 8px;
+  }
+
+  .info ul li {
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.116);
+    font-size: 0.8rem;
+    border-radius: 7px;
   }
 
   @keyframes showBg {
