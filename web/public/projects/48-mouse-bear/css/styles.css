@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #F9CB3A;
+  cursor: url('../img/cursor.svg'), auto;
+  transition: 0.5s;
+}
+
+svg {
+  width: 200px;
+}

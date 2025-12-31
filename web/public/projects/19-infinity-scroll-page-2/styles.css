@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  --duration: 20s;
+  --itemsCount: 3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Mono', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+section {
+  width: 80%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section .content {
+  min-width: 250px;
+  flex: 1;
+  overflow: hidden;
+}
+
+section .first__scroll,
+section .second__scroll {
+  min-width: 300px;
+  height: 350px;
+  flex: 1;
+  overflow: hidden;
+}
+
+section .second__scroll {
+  height: 450px;
+}
+
+.content span:first-child {
+  display: block;
+  margin-bottom: 15px;
+  color: rgb(160, 160, 160);
+  font-size: 0.7rem;
+  font-weight: 200;
+}
+
+.content h1 {
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.content p {
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: rgb(22, 22, 22);
+}
+
+.content span:last-child {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.first__scroll {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.first__scroll .tape {
+  width: 150px;
+  position: relative;
+}
+
+.first__scroll .tape .item {
+  width: 150px;
+  height: 250px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.178);
+  border-radius: 8px;
+}
+
+.tape .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first__scroll .tape .item img {
+  width: 70%;
+}
+
+.first__scroll .to-bottom .item {
+  position: absolute;
+  bottom: max(calc(195px * 3), 100%);
+  animation-name: scroll-bottom;
+  animation-duration: var(--duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: calc(var(--duration) / var(--itemsCount) * (var(--itemsCount) - var(--position)) * -1);
+}
+
+@keyframes scroll-bottom {
+  to {
+    bottom: -250px;
+  }
+}
+
+.first__scroll .to-top .item {
+  position: absolute;
+  top: max(calc(195px * 3), 100%);
+  animation-name: scroll-top;
+  animation-duration: var(--duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: calc(var(--duration) / var(--itemsCount) * (var(--itemsCount) - var(--position)) * -1);
+}
+
+@keyframes scroll-top {
+  to {
+    top: -250px;
+  }
+}
+
+.second__scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.second__scroll .tape {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  min-height: 120px;
+  position: relative;
+}
+
+.second__scroll .tape .item {
+  width: 310px;
+  height: 120px;
+  background: white;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.178);
+  border-radius: 8px;
+}
+
+.second__scroll .tape .item img {
+  width: 100px;
+}
+
+.second__scroll .to-right .item {
+  position: absolute;
+  right: max(calc(250px * 3), 100%);
+  animation-name: scroll-right;
+  animation-duration: var(--duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: calc(var(--duration) / var(--itemsCount) * (var(--itemsCount) - var(--position)) * -1);
+}
+
+@keyframes scroll-right {
+  to {
+    right: -250px;
+  }
+}
+
+.second__scroll .to-left .item {
+  position: absolute;
+  left: max(calc(250px * 3), 100%);
+  animation-name: scroll-left;
+  animation-duration: var(--duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: calc(var(--duration) / var(--itemsCount) * (var(--itemsCount) - var(--position)) * -1);
+}
+
+@keyframes scroll-left {
+  to {
+    left: -250px;
+  }
+}
