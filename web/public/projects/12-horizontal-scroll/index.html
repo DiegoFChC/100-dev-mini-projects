@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Horizontal Scroll</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle">
+        <div></div>
+        <p>Ana M</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>Marcos</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>Felipe A</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>Camilo F</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>María Q</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>Diego</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>Carlos</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>Camila Muñoz</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>Felipe</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>David</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>Sandra M</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>José</p>
+      </div>
+      <div class="circle">
+        <div></div>
+        <p>Angela R</p>
+      </div>
+    </div>
+    <script>
+      const $scrollContainer = document.querySelector('.container')
+
+      $scrollContainer.addEventListener('wheel', (e) => {
+        e.preventDefault()
+        $scrollContainer.scrollLeft += e.deltaY / 10
+      })
+    </script>
+  </body>
+</html>

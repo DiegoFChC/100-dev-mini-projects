@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
+  background-color: aquamarine;
+}
+
+.images__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images__container .image {
+  position: relative;
+  margin-right: -20px;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.images__container .image img {
+  height: 150px;
+  width: 150px;
+  transition: transform 0.32s ease-in-out;
+}
+
+.images__container .image .name {
+  position: absolute;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  display: none;
+  min-width: 100px;
+  width: 150px;
+  top: -70px;
+  padding: 10px 15px;
+}
+
+.images__container .image .name .text {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  width: 150px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.images__container .image:hover .name {
+  display: inline-block;
+  transform: translateY(-20px);
+}
+
+.images__container .image .name::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: 40%;
+  bottom: -20px;
+  border-top: solid 10px black;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+}
+
+.images__container .image:hover img {
+  transform: translateY(-20px);
+}
+
+@media (max-width: 830px) {
+  .images__container {
+    flex-direction: column;
+    height: 130vh;
+  }
+}

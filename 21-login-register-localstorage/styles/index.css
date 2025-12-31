@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+body {
+  background: white;
+}
+
+.login__container,
+.signup__container,
+.home__container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+form {
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+form label {
+  font-size: 0.8rem;
+}
+
+form input {
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  background: rgb(224, 224, 224);
+  border: none;
+  outline: none;
+}
+
+form input:focus {
+  outline: 1px solid #0636f2;
+}
+
+form button {
+  padding: 5px;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+p > a {
+  color: #0636f2;
+  text-decoration: none;
+}
+
+p > a:hover {
+  color: #244ffc;
+}
+
+button {
+  padding: 5px 10px;
+  height: 30px;
+  margin-top: 10px;
+  background: #0636f2;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #244ffc;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Sidebar</title>
+  </head>
+  <body data-theme="light">
+    <section class="sidebar normal">
+      <div class="title">
+        <!-- <img src="./img/logo.webp" alt="logo" /> -->
+        <div class="menuToggle"></div>
+        <div>
+          <h1>Sidebar</h1>
+          <span>HTML - CSS - Javascript</span>
+        </div>
+      </div>
+      <div class="menu_container">
+        <ul class="menu">
+          <li class="item selected">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="mail-outline"></ion-icon
+              ></span>
+              <span>Inbox</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="document-outline"></ion-icon
+              ></span>
+              <span>Draf</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="star-outline"></ion-icon
+              ></span>
+              <span>Starred</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="paper-plane-outline"></ion-icon
+              ></span>
+              <span>Sent</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="trash-outline"></ion-icon
+              ></span>
+              <span>Trash</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="shield-outline"></ion-icon
+              ></span>
+              <span>Spam</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="menu_bottom">
+          <li class="item">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="settings-outline"></ion-icon
+              ></span>
+              <span>Setting</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="notifications-outline"></ion-icon
+              ></span>
+              <span>Notifications</span>
+            </a>
+          </li>
+        </ul>
+        <div class="theme">
+          <p>Change theme</p>
+          <div id="toggle_theme">
+            <i class="indicator"></i>
+          </div>
+        </div>
+        <div class="log_out">
+          <img src="./img/avatar.jpg" alt="avatar" />
+          <span class="name">Log Out</span>
+          <a href="#">
+            <span class="icon"><ion-icon name="exit-outline"></ion-icon></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="content"></section> -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
