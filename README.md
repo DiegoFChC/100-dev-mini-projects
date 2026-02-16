@@ -19,6 +19,7 @@ git clone https://github.com/DiegoFChC/100-dev-mini-projects.git
 ```
 
 2. Explorar un proyecto específico
+
 Navega a la carpeta del proyecto que te interese y abre el archivo index.html en tu navegador.
 
 ```bash
@@ -26,6 +27,7 @@ cd nombre-del-proyecto
 ```
 
 3. Ejecutar el visualizador (Astro)
+
 Si quieres ver la plataforma web que lista todos los proyectos:
 
 ```bash
