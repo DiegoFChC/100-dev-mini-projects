@@ -309,4 +309,11 @@ export const PROJECTS = [
       'Ventana modal para informacion general.',
     learnings: ['HTML', 'CSS', 'JS'],
   },
+  {
+    slug: '52-button',
+    title: 'Button click animation',
+    description:
+      'Botón con animación al dar click sobre él.',
+    learnings: ['HTML', 'CSS', 'JS'],
+  },
 ]
