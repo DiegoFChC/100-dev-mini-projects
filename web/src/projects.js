@@ -309,4 +309,25 @@ export const PROJECTS = [
       'Ventana modal para informacion general.',
     learnings: ['HTML', 'CSS', 'JS'],
   },
+  {
+    slug: '52-button',
+    title: 'Button click animation',
+    description:
+      'Botón con animación al dar click sobre él.',
+    learnings: ['HTML', 'CSS', 'JS'],
+  },
+  {
+    slug: '53-event-delegation',
+    title: 'Delegación de eventos',
+    description:
+      'Práctica de JavaScript para entender como funciona la delegaciónd e eventos, aprovechando el bubbling.',
+    learnings: ['HTML', 'CSS', 'JS'],
+  },
+  {
+    slug: '54-input-animation',
+    title: 'Input animation',
+    description:
+      'Input con animación de borde y label.',
+    learnings: ['HTML', 'CSS'],
+  },
 ]
