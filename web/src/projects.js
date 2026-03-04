@@ -305,15 +305,13 @@ export const PROJECTS = [
   {
     slug: '51-modal',
     title: 'Modal Window',
-    description:
-      'Ventana modal para informacion general.',
+    description: 'Ventana modal para informacion general.',
     learnings: ['HTML', 'CSS', 'JS'],
   },
   {
     slug: '52-button',
     title: 'Button click animation',
-    description:
-      'Botón con animación al dar click sobre él.',
+    description: 'Botón con animación al dar click sobre él.',
     learnings: ['HTML', 'CSS', 'JS'],
   },
   {
@@ -326,8 +324,28 @@ export const PROJECTS = [
   {
     slug: '54-input-animation',
     title: 'Input animation',
+    description: 'Input con animación de borde y label.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '55-border-animation',
+    title: 'Border animation',
     description:
-      'Input con animación de borde y label.',
+      'Card con animación de borde y uso de custom properties. Crea una animación en la que el borde de tu card rote, mostrándose en dos trozos.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '56-border-animation',
+    title: 'Border animation',
+    description:
+      'Card con animación de borde y uso de custom properties. Crea una animación en la que el border de tu card rote, pero además de esto que la sombra de la misma rote junto con tu borde.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '57-border-animation',
+    title: 'Border animation',
+    description:
+      'Card con animación de borde y uso de custom properties. Realiza una animación sobre el borde de tu card, cambiando el ángulo del background y el nivel de transparencia del mismo.',
     learnings: ['HTML', 'CSS'],
   },
 ]
