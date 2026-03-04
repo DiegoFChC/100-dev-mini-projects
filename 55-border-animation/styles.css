@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f1628;
+  font-family: sans-serif;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  margin: 0 auto;
+  background: #010c1d;
+  border-radius: 8px;
+  position: relative;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.box {
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+  display: inline-block;
+  align-items: center;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: calc(101% + 1px);
+  height: calc(101% + 1px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(    var(--rotation),    transparent 15%,    #00eaff,    #00eaff,    transparent 85%  );
+  animation:    spin    5s linear infinite;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  -webkit-animation:    spin    5s linear infinite;
+}
+
+@property --rotation {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes spin {
+  0% {
+    --rotation: 0deg;
+  }
+  to {
+    --rotation: 360deg;
+  }
+}
