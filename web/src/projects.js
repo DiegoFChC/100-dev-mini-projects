@@ -348,4 +348,44 @@ export const PROJECTS = [
       'Card con animación de borde y uso de custom properties. Realiza una animación sobre el borde de tu card, cambiando el ángulo del background y el nivel de transparencia del mismo.',
     learnings: ['HTML', 'CSS'],
   },
+  {
+    slug: '58-circular-grid-background',
+    title: 'Circular grid background',
+    description:
+      'Crea un background para tu web con forma de grilla, y degradado circular. La idea es que dicho background sea transparente para que se vean los colores de fondo.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '59-linear-grid-background',
+    title: 'Linear grid background',
+    description:
+      'Crea un background para tu web con forma de grilla, y degradado vertical. La idea es que dicho background sea transparente para que se vean los colores de fondo.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '60-mouse-tracking',
+    title: 'Mouse tracking',
+    description: 'Crea un efecto sobre tu cursor, una sombra lo sigue por donde quiera que se mueve, y cambia sus estilos al hacer hover sobre algún objeto específico.',
+    learnings: ['HTML', 'CSS', 'JS'],
+  },
+  {
+    slug: '61-background-animation',
+    title: 'Background animation',
+    description: 'Dale un estilo diferente a tus background con animaciones. Simula esta tres figuras floando en el fondo de tu página.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '62-AI-aura',
+    title: 'AI aura',
+    description:
+      'Crea la animación de AI aura. Un borde interno (degradado) sobre tu pantalla principal, el cual da a entender que la IA está interactuando con tu dispositivo.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '63-scroll-to-top-button',
+    title: 'Scroll to top button',
+    description:
+      'Crea un botón que facilite el scroll hacia arriba. Cuando pases cierta profundidad en tu web, muestra un boton que permita reinicar el scroll.',
+    learnings: ['HTML', 'CSS', 'JS'],
+  },
 ]
