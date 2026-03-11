@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+p {
+  width: min(700px, 90%);
+  text-align: center;
+  color: rgb(237, 226, 241);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.267);
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  filter: blur(50px);
+  -webkit-filter: blur(50px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.circle:nth-child(1) {
+  background: rgb(67, 0, 143);
+  top: 50%;
+  left: 50%;
+  border-end-end-radius: 50px;
+  filter: blur(80px);
+  -webkit-filter: blur(80px);
+  animation: move-one 20s infinite;
+  -webkit-animation: move-one 20s infinite;
+}
+
+.circle:nth-child(2) {
+  background: rgb(237, 102, 255);
+  top: 40%;
+  left: 20%;
+  border-top-left-radius: 50%;
+  animation: move-two 25s infinite;
+  -webkit-animation: move-two 25s infinite;
+  animation-delay: 1s;
+}
+
+.circle:nth-child(3) {
+  background: rgb(170, 0, 212);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom-left-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  animation: move-three 22s infinite;
+  -webkit-animation: move-three 22s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes move-one {
+  0%, 100% {
+    top: 50%;
+    left: 50%;
+  }
+  50% {
+    top: 35%;
+    left: 60%;
+  }
+}
+@keyframes move-two {
+  0%, 100% {
+    top: 40%;
+    left: 20%;
+  }
+  30% {
+    top: 50%;
+    left: 40%;
+  }
+  60% {
+    top: 40%;
+    left: 35%;
+  }
+}
+@keyframes move-three {
+  0%, 100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    top: 40%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+}
