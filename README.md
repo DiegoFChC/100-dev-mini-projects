@@ -6,7 +6,7 @@
 # 📂 Estructura del Proyecto
 El repositorio está organizado de manera que cada proyecto sea independiente, facilitando su exploración y aprendizaje.
 
-* **/:** Contiene las carpetas individuales de cada reto (HTML, CSS, JS puros).
+* **/projects:** Contiene las carpetas individuales de cada reto (HTML, CSS, JS puros).
 * **/web:** Una aplicación moderna construida con Astro que sirve como interfaz para visualizar las demos en vivo de cada proyecto.
 
 # 🕹️ Cómo empezar
@@ -23,7 +23,7 @@ git clone https://github.com/DiegoFChC/100-dev-mini-projects.git
 Navega a la carpeta del proyecto que te interese y abre el archivo index.html en tu navegador.
 
 ```bash
-cd nombre-del-proyecto
+cd projects/nombre-del-proyecto
 ```
 
 3. Ejecutar el visualizador (Astro)
