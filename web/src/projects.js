@@ -388,4 +388,18 @@ export const PROJECTS = [
       'Crea un botón que facilite el scroll hacia arriba. Cuando pases cierta profundidad en tu web, muestra un boton que permita reinicar el scroll.',
     learnings: ['HTML', 'CSS', 'JS'],
   },
+  {
+    slug: '64-flip-card-effect',
+    title: 'Flip card effect',
+    description:
+      'Crea un efecto de carta giratoria en 3D.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '65-memory-game',
+    title: 'Memory game',
+    description:
+      'Clásico juego de memoria. Encuentra las parejas de tarjetas y practica tu lógica de programación. Tip: ¿Que es el algoritmo Fisher–Yates?',
+    learnings: ['HTML', 'CSS', 'JS'],
+  },
 ]
