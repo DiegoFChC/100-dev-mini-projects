@@ -402,4 +402,18 @@ export const PROJECTS = [
       'Clásico juego de memoria. Encuentra las parejas de tarjetas y practica tu lógica de programación. Tip: ¿Que es el algoritmo Fisher–Yates?',
     learnings: ['HTML', 'CSS', 'JS'],
   },
+  {
+    slug: '66-header-scroll-effect',
+    title: 'Header scroll effect',
+    description:
+      'Crea un efecto sobre tu header, el cual cambia de forma al hacer scroll en tu web, usando sólo css.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '67-scroll-progress-indicator',
+    title: 'Scroll progress indicator',
+    description:
+      'Barra superior que indica cuanto haz escroleado en tu web.',
+    learnings: ['HTML', 'CSS'],
+  },
 ]
