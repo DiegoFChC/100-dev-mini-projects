@@ -24,7 +24,7 @@ body::before {
   position: fixed;
   top: -40%;
   left: 0;
-  z-index: -100;
+  z-index: -1000;
 }
 
 body::after {
@@ -35,6 +35,7 @@ body::after {
   position: fixed;
   top: 0;
   right: -1600px;
+  z-index: -999;
 }
 
 ul {
