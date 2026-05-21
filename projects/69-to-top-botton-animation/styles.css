@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+@property --scroll-progress {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  background: rgb(0, 3, 27);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  width: min(80%, 900px);
+  margin: 150px 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.content {
+  height: 100dvh;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: rgb(32, 32, 49);
+}
+
+.to-top {
+  width: 50px;
+  height: 50px;
+  background: rgb(29, 31, 53);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0 0 5px rgb(61, 64, 87) inset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 100px;
+  right: -100px;
+  animation: show-btn linear forwards;
+  @supports (animation-timeline: view()) {
+    animation-timeline: view();
+    animation-range-start: 30dvh;
+    animation-range-end: 60dvh;
+  }
+}
+
+@keyframes show-btn {
+  to {
+    transform: translateX(-150px);
+  }
+}
+
+.to-top::before,
+.to-top::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.to-top::before {
+  width: 90%;
+  height: 90%;
+  background: conic-gradient(white var(--scroll-progress), rgb(29, 31, 53) 0deg);
+  z-index: -10;
+  animation: progress-bar linear forwards;
+  @supports (animation-timeline: scroll(y)) {
+    animation-timeline: scroll(y);
+  }
+}
+
+@keyframes progress-bar {
+  to {
+    --scroll-progress: 360deg;
+  }
+}
+
+.to-top::after {
+  width: 75%;
+  height: 75%;
+  background: rgb(29, 31, 53);
+  z-index: -5;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    font-size: 1.5rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

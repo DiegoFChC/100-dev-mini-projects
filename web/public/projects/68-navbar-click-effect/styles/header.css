@@ -1,0 +1,87 @@
+@property --x-backdrop {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+
+header {
+  width: 100%;
+  background: rgba(255, 253, 253, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+}
+
+nav {
+  margin: 25px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+nav ul {
+  width: 100%;
+  padding: 4px;
+  background: #EFEFEC;
+  border-radius: 14px;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.1) inset;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+nav ul li {
+  width: 130px;
+  height: 30px;
+  color: #5F5E52;
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+nav ul li.active {
+  color: #242421;
+}
+
+.menu-backdrop {
+  width: 130px;
+  height: 34px;
+  background: #FCFCFA;
+  border-radius: 12px;
+  box-shadow: 0 0 2px rgba(128, 128, 128, 0.4);
+  position: absolute;
+  top: 50%;
+  transform: translate(var(--x-backdrop), -50%);
+  z-index: 5;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  animation: show-backdrop .5s ease-in-out forwards;
+}
+
+@keyframes show-backdrop {
+  0% {
+    left: -130px;
+  }
+  40% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    left: 2px;
+  }
+}
+
+@media (max-width: 450px  ) {
+  .menu-backdrop,
+  header nav ul li {
+    width: 100px;
+  }
+}
