@@ -416,4 +416,25 @@ export const PROJECTS = [
       'Barra superior que indica cuanto haz escroleado en tu web.',
     learnings: ['HTML', 'CSS'],
   },
+  {
+    slug: '68-navbar-click-effect',
+    title: 'Navbar click effect',
+    description:
+      'Da un estilo diferente a tu barra de navegación, añade una animación al fondo de cada uno de tus elementos al dar click sobre ellos. Esta animación permite ver continuamente el fondo de cada elemento al cambiar entre botones.',
+    learnings: ['HTML', 'CSS', 'JS'],
+  },
+  {
+    slug: '69-to-top-botton-animation',
+    title: 'To top botton animation',
+    description:
+      'Crear un boton para reinicar el scroll de tu página, pero adicional haz que el botón muestre cuanto scroll haz hecho en tu web.',
+    learnings: ['HTML', 'CSS', 'JS'],
+  },
+  {
+    slug: '70-copy-to-clipboard',
+    title: 'Navbar click effect',
+    description:
+      'Crea la clásica función de copiar texto en el portapapeles.',
+    learnings: ['HTML', 'CSS', 'JS'],
+  },
 ]
