@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #0e1111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+svg {
+  width: min(90%, 600px);
+  /* mask-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.5), transparent 70%); */
+}
+
+/* Estilo base para todos los trazos */
+.trazo-animado {
+  stroke: #ccff33; /* Color verde/amarillo neón */
+  /* stroke-width: 1.5; */
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  /* Magia de la animación */
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dibujarLinea 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: var(--d);
+}
+
+/* Puntos decorativos en los vértices del hexágono */
+.punto {
+  fill: #ccff33;
+  opacity: 0;
+  animation: aparecerPuntos 0.5s ease forwards;
+  animation-delay: var(--d); /* Aparecen casi al final de la animación */
+}
+
+/* Keyframes para el efecto de dibujo */
+@keyframes dibujarLinea {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Keyframes para los vértices */
+@keyframes aparecerPuntos {
+  to {
+    opacity: 1;
+  }
+}
