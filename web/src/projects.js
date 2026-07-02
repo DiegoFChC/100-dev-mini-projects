@@ -432,9 +432,23 @@ export const PROJECTS = [
   },
   {
     slug: '70-copy-to-clipboard',
-    title: 'Navbar click effect',
+    title: 'Copy to clipboard',
     description:
       'Crea la clásica función de copiar texto en el portapapeles.',
     learnings: ['HTML', 'CSS', 'JS'],
+  },
+  {
+    slug: '71-faq-accordion',
+    title: 'FAQ accordion',
+    description:
+      'Página de preguntas frecuentes, con estilo acordeón sin usar JavaScrip.',
+    learnings: ['HTML', 'CSS'],
+  },
+  {
+    slug: '72-svg-animation',
+    title: 'SVG animation',
+    description:
+      'Anima formas de forma fluida con SVG. En este caso anima un polígono y su contenido usando delay.',
+    learnings: ['HTML', 'CSS'],
   },
 ]

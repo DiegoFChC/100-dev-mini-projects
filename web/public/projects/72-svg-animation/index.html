@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Animación SVG</title>
+  </head>
+  <body>
+    <!-- SVG estructurado con viewBox centrado en 0,0 para facilitar la geometría -->
+    <svg viewBox="-120 -120 240 240">
+      <!-- Círculo exterior (Radio 100) -->
+      <circle
+        class="trazo-animado"
+        style="--d: 0s"
+        cx="0"
+        cy="0"
+        r="100"
+        stroke-width="1"
+      />
+
+      <!-- Hexágono exterior grande -->
+      <!-- Puntos calculados matemáticamente para un radio de 100 (cos y sin de 30, 90, 150...) -->
+      <polygon
+        class="trazo-animado"
+        points="0,-100 86.6,-50 86.6,50 0,100 -86.6,50 -86.6,-50"
+        stroke-width="0.5"
+        style="--d: 0.7s"
+      />
+
+      <!-- Líneas diagonales internas (Ejes del cubo) -->
+      <line class="trazo-animado" style='--d: 0.9s;' x1="0" y1="0" x2="0" y2="-100" stroke-width='0.3' />
+      <line class="trazo-animado" style='--d: 1.05s;' x1="0" y1="0" x2="86.6" y2="-50" stroke-width='0.3' />
+      <line class="trazo-animado" style='--d: 1.2s;' x1="0" y1="0" x2="86.6" y2="50" stroke-width='0.3' />
+      <line class="trazo-animado" style='--d: 1.35s;' x1="0" y1="0" x2="0" y2="100" stroke-width='0.3' />
+      <line class="trazo-animado" style='--d: 1.5s;' x1="0" y1="0" x2="-86.6" y2="50" stroke-width='0.3' />
+      <line class="trazo-animado" style='--d: 1.65s;' x1="0" y1="0" x2="-86.6" y2="-50" stroke-width='0.3' />
+
+      <!-- Hexágono intermedio (Radio 50) -->
+      <polygon
+        class="trazo-animado"
+        points="0,-50 43.3,-25 43.3,25 0,50 -43.3,25 -43.3,-25"
+        stroke-width="0.3"
+        style="--d: 1.3s"
+      />
+
+      <!-- Pequeño círculo concéntrico en el centro (Radio 12) -->
+      <circle class="trazo-animado" style='--d: 2s;' cx="0" cy="0" r="12" />
+      <circle class="punto" style='--d: 2s;' cx="0" cy="0" r="4" />
+
+      <!-- Puntos brillantes en los 6 vértices exteriores -->
+      <circle class="punto" style='--d: 1.8s' cx="0" cy="-100" r="3" />
+      <circle class="punto" style='--d: 1.9s' cx="86.6" cy="-50" r="3" />
+      <circle class="punto" style='--d: 2s' cx="86.6" cy="50" r="3" />
+      <circle class="punto" style='--d: 2.1s' cx="0" cy="100" r="3" />
+      <circle class="punto" style='--d: 2.2s' cx="-86.6" cy="50" r="3" />
+      <circle class="punto" style='--d: 2.3s' cx="-86.6" cy="-50" r="3" />
+    </svg>
+  </body>
+</html>
